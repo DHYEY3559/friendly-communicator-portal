@@ -90,6 +90,17 @@ const SidePanel: React.FC<SidePanelProps> = ({ isOpen, onClose, openAuthModal })
             </ul>
           </nav>
           
+          <div className="sticky bottom-0 w-full bg-sidebar p-4 border-t border-border z-10">
+            <button
+              onClick={onClose}
+              className="flex items-center justify-center w-full gap-2 px-3 py-2 text-sm font-medium rounded-md bg-secondary hover:bg-secondary/80 transition-colors"
+              aria-label="Close panel"
+            >
+              <X size={16} />
+              Close Panel
+            </button>
+          </div>
+          
           {!isAuthenticated && (
             <div className="p-4 border-t border-border mt-auto">
               <div className="flex flex-col space-y-2">
